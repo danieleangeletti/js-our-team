@@ -20,6 +20,12 @@ our_team_array.push(wayne_barnett, angela_caroll, walter_gordon, angela_lopez, s
 
 console.log(our_team_array);
 
+for (let i = 0; i < our_team_array.length; i++) {
+
+    console.log(our_team_array[i].first_name, our_team_array[i].last_name, our_team_array[i].role, our_team_array[i].image);
+
+}
+
 // FUNCTION
 
 function generate_character(first_name, last_name, role, image) {
