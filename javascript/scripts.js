@@ -1,3 +1,5 @@
+const my_container = document.getElementById("my-container");
+
 const our_team_array = [];
 
 const src_img_array = [
@@ -23,6 +25,11 @@ console.log(our_team_array);
 for (let i = 0; i < our_team_array.length; i++) {
 
     console.log(our_team_array[i].first_name, our_team_array[i].last_name, our_team_array[i].role, our_team_array[i].image);
+
+    const my_line = document.createElement("p");
+    my_line.append(our_team_array[i].first_name + " " + our_team_array[i].last_name + ", " + our_team_array[i].role + ", " + our_team_array[i].image);
+    my_container.append(my_line);
+    
 
 }
 
