@@ -1,4 +1,5 @@
 const my_container = document.getElementById("my-container");
+const my_row = document.getElementById("my-row");
 
 const our_team_array = [];
 
@@ -26,10 +27,18 @@ for (let i = 0; i < our_team_array.length; i++) {
 
     console.log(our_team_array[i].first_name, our_team_array[i].last_name, our_team_array[i].role, our_team_array[i].image);
 
-    const my_line = document.createElement("p");
-    my_line.innerHTML += our_team_array[i].first_name + " " + our_team_array[i].last_name + ", " + our_team_array[i].role + `<img src="${our_team_array[i].image}" alt="">`;
-    my_container.append(my_line);
-    
+    const my_div = document.createElement("div");
+    my_div.classList.add("card", "col-2");
+
+    my_div.innerHTML += 
+    `
+    <img src="${our_team_array[i].image}" class='card-img-top' alt='...'>
+    <div class='card-body'>
+        <h5 class='card-title'>${our_team_array[i].first_name} ${our_team_array[i].last_name}</h5>
+        <p class='card-text'>${our_team_array[i].role}</p>
+    </div>
+    `
+    my_row.append(my_div);
 
 }
 
